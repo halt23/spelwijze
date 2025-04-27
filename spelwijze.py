@@ -15,7 +15,7 @@ required_letter = input('Enter the required letter. -> ')
 allowed_letters += required_letter
 
 # Convert allowed_letters to a set (Use this later).
-allowed_letters = set(allowed_letters)
+allowed_letters = set(allowed_letters.lower())
 
 # Open the wordlist you want to use (I wil later use this for accurecy testing).
 # Read every line and add it to a list to use later on.
