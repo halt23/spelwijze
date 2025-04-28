@@ -7,5 +7,5 @@ while IFS= read -r line
 do
     wtype "$line"
     wtype $'\n'  # Press Enter
-    sleep 1
+    sleep 0.5
 done < "$input_file"
