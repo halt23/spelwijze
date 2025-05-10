@@ -1,4 +1,13 @@
+import sys
+import os
+def abs_path(relative_path) :
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 input_file = input("Enter the name of the input file you want to use. Include '.txt' !! -> ")
+input_file = abs_path(input_file)
 output_file = input("Enter the name of the output file you want to use. Include '.txt' !! -> ")
 allowed_letters = ""
 
@@ -13,7 +22,6 @@ while True:
 
 required_letter = input('Enter the required letter. -> ')
 allowed_letters += required_letter
-
 # Convert allowed_letters to a set (Use this later).
 allowed_letters = set(allowed_letters.lower())
 
